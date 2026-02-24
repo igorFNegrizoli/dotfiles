@@ -8,6 +8,7 @@
 
 # Whitelist
 # Need to add both the root folder and the recursive wildcard
+!init.sh
 !alacritty/
 !alacritty/**
 !claude/
