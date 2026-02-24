@@ -26,6 +26,8 @@
 !qtile/**
 !tmux/
 !tmux/**
+!deps/
+!deps/**
 
 # Assuring these kinds of files/folders do not get commited event if they are inside the whitelisted folders
 **/.DS_Store
