@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace,type=bind,consistency=cached",
+  "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace/v3-repos,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "mounts": [
     "source=${localEnv:HOME}/.config/claude-runner,target=/root/.config/claude-code,type=bind",
