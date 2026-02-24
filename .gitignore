@@ -14,6 +14,8 @@
 !claude/
 !claude/**
 !claude-runner/
+!claude-runner/.devcontainer/
+!claude-runner/.devcontainer/**
 !claude-runner/skills/
 !claude-runner/skills/**
 # Specifically ignore the ralph files that comes from the submodule (copied during the init.sh script)
