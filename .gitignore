@@ -1,0 +1,37 @@
+# Ignoere everything
+*
+
+# Unignore gitignore
+!.gitignore
+
+# Exceptions, the configs I actually want to store
+
+# Whitelist
+# Need to add both the root folder and the recursive wildcard
+!alacritty/
+!alacritty/**
+!claude/
+!claude/**
+!claude-runner/
+!claude-runner/**
+!htop/
+!htop/**
+!nautilus/
+!nautilus/**
+!opencode/
+!opencode/**
+!qBittorrent/
+!qBittorrent/**
+!qtile/
+!qtile/**
+!tmux/
+!tmux/**
+
+# Assuring these kinds of files/folders do not get commited event if they are inside the whitelisted folders
+**/.DS_Store
+**/node_modules/
+**/target/
+**/*.log
+**/__pycache__/
+**/session/
+**/cookies/

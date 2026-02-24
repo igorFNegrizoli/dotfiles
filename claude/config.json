@@ -1,0 +1,405 @@
+{
+  "numStartups": 28,
+  "installMethod": "native",
+  "autoUpdates": false,
+  "hasSeenTasksHint": true,
+  "tipsHistory": {
+    "new-user-warmup": 8,
+    "plan-mode-for-complex-tasks": 7,
+    "memory-command": 20,
+    "theme-command": 22,
+    "status-line": 27,
+    "stickers-command": 2,
+    "prompt-queue": 22,
+    "enter-to-steer-in-relatime": 22,
+    "todo-list": 22,
+    "ide-upsell-external-terminal": 26,
+    "install-github-app": 23,
+    "install-slack-app": 23,
+    "drag-and-drop-images": 23,
+    "double-esc-code-restore": 23,
+    "continue": 23,
+    "shift-tab": 23,
+    "image-paste": 22,
+    "web-app": 20,
+    "mobile-app": 20,
+    "shift-enter": 24,
+    "custom-agents": 22,
+    "default-permission-mode-config": 22,
+    "permissions": 23,
+    "rename-conversation": 28,
+    "custom-commands": 28,
+    "agent-flag": 28,
+    "overage-promo": 24
+  },
+  "promptQueueUseCount": 13,
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": true
+  },
+  "cachedGrowthBookFeatures": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    },
+    "tengu_mcp_tool_search": true,
+    "tengu_scratch": false,
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_event_sampling_config": {},
+    "tengu_tool_pear": false,
+    "tengu_thinkback": false,
+    "tengu_sumi": true,
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_pid_based_version_locking": true,
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    },
+    "tengu_react_vulnerability_warning": false,
+    "tengu_code_diff_cli": true,
+    "tengu_post_compact_survey": false,
+    "enhanced_telemetry_beta": false,
+    "tengu_streaming_tool_execution2": true,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_ant_attribution_header_new": true,
+    "tengu_session_memory": false,
+    "tengu_bash_haiku_prefetch": true,
+    "tengu_permission_explainer": true,
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_prompt_suggestion": true,
+    "tengu_keybinding_customization": false,
+    "tengu_claudeai_mcp_connectors": true,
+    "tengu_plank_river_frost": "user_intent",
+    "tengu_sm_compact": false,
+    "tengu_compact_streaming_retry": false,
+    "tengu_attribution_header": true,
+    "tengu_brass_pebble": false,
+    "tengu_marble_anvil": true,
+    "tengu_scarf_coffee": false,
+    "tengu_keybinding_customization_release": true,
+    "tengu_pr_status_cli": true,
+    "tengu_marble_kite": false,
+    "tengu_kv7_prompt_sort": false,
+    "tengu_coral_fern": false,
+    "tengu_cache_plum_violet": true,
+    "tengu_cork_m4q": true,
+    "tengu_file_write_optimization": false,
+    "tengu_compact_cache_prefix": true,
+    "tengu_system_prompt_global_cache": true,
+    "tengu_workout": false,
+    "tengu_penguins_enabled": true,
+    "tengu_chomp_inflection": true,
+    "tengu_oboe": false,
+    "tengu_silver_lantern": false,
+    "tengu_copper_lantern": false,
+    "tengu_copper_lantern_config": {
+      "meridian": "2026-02-05T07:59:00Z"
+    },
+    "tengu_penguins_off": null,
+    "tengu_tst_names_in_messages": false,
+    "tengu_vinteuil_phrase": true,
+    "tengu_workout2": true,
+    "tengu_marble_lantern_disabled": false,
+    "tengu_mcp_elicitation": false,
+    "tengu_bergotte_lantern": false,
+    "tengu_snippet_save": false,
+    "tengu_birthday_hat": false,
+    "tengu_fgts": false,
+    "tengu_prompt_cache_1h_config": {
+      "allowlist": [
+        "repl_main_thread*",
+        "sdk"
+      ]
+    },
+    "tengu_immediate_model_command": false,
+    "tengu_disable_streaming_to_non_streaming_fallback": false,
+    "tengu_slate_nexus": false,
+    "tengu_marble_sandcastle": true,
+    "tengu_birch_mist": false,
+    "tengu_oak_drum": false,
+    "tengu_destructive_command_warning": false,
+    "tengu_worktree_mode": true,
+    "tengu_pebble_leaf_prune": false,
+    "tengu_swann_brevity": "control",
+    "tengu_tool_input_aliasing": false
+  },
+  "userID": "30f53e8a84a4a290be607e2738e9b0ae4dbe6fbb85ebb017224feebcfe11b210",
+  "firstStartTime": "2026-01-15T14:23:58.448Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "opusProMigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "cachedChromeExtensionInstalled": false,
+  "changelogLastFetched": 1771548485625,
+  "autoUpdatesProtectedForNative": true,
+  "oauthAccount": {
+    "accountUuid": "c3d5cce4-cdf7-4951-84b6-650564a91165",
+    "emailAddress": "igor.negrizoli@gmail.com",
+    "organizationUuid": "e76c31cf-75df-402f-a01c-b82c01506569",
+    "hasExtraUsageEnabled": false,
+    "displayName": "Igor",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "igor.negrizoli@gmail.com's Organization",
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2026-01-02T17:34:42.250189Z",
+    "subscriptionCreatedAt": "2026-01-19T17:45:23.127223Z"
+  },
+  "claudeCodeFirstTokenDate": "2026-01-19T17:46:55.433737Z",
+  "shiftEnterKeyBindingInstalled": true,
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.7",
+  "projects": {
+    "/home/igor/Desktop/trustguard/v3-repos": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 15.542734099999997,
+      "lastAPIDuration": 49380688,
+      "lastAPIDurationWithoutRetries": 49374630,
+      "lastToolDuration": 1456024,
+      "lastDuration": 362743370,
+      "lastLinesAdded": 1161,
+      "lastLinesRemoved": 475,
+      "lastTotalInputTokens": 85959,
+      "lastTotalOutputTokens": 122759,
+      "lastTotalCacheCreationInputTokens": 897450,
+      "lastTotalCacheReadInputTokens": 18843534,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 82166,
+          "outputTokens": 19775,
+          "cacheReadInputTokens": 1358291,
+          "cacheCreationInputTokens": 343877,
+          "webSearchRequests": 0,
+          "costUSD": 0.7467163499999995
+        },
+        "claude-opus-4-6": {
+          "inputTokens": 263,
+          "outputTokens": 75204,
+          "cacheReadInputTokens": 15043982,
+          "cacheCreationInputTokens": 360234,
+          "webSearchRequests": 0,
+          "costUSD": 11.6548685
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 3201,
+          "outputTokens": 16369,
+          "cacheReadInputTokens": 1431642,
+          "cacheCreationInputTokens": 104727,
+          "webSearchRequests": 0,
+          "costUSD": 1.79559475
+        },
+        "claude-sonnet-4-6": {
+          "inputTokens": 329,
+          "outputTokens": 11411,
+          "cacheReadInputTokens": 1009619,
+          "cacheCreationInputTokens": 88612,
+          "webSearchRequests": 0,
+          "costUSD": 1.3455545000000002
+        }
+      },
+      "lastSessionId": "a0d5cada-3bdd-44bf-a8be-b812326a9e12",
+      "hasCompletedProjectOnboarding": true,
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 27054,
+        "frame_duration_ms_min": 0.08825499999875319,
+        "frame_duration_ms_max": 62.72170100361109,
+        "frame_duration_ms_avg": 1.6216685853189725,
+        "frame_duration_ms_p50": 1.324780998751521,
+        "frame_duration_ms_p95": 2.581343248486516,
+        "frame_duration_ms_p99": 4.371063588857638
+      },
+      "lastFpsAverage": 0.22,
+      "lastFpsLow1Pct": 165.9
+    },
+    "/home/igor": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "web-search": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "websearch-mcp"
+          ],
+          "env": {}
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      }
+    },
+    "/home/igor/Desktop/trustguard/v3-repos/backend-v3": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 9,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "auth.py",
+        "finding_remediation.py",
+        "pipeline_executor.py",
+        "organization.py",
+        "assessment.py"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1771890043696,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 536512,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.22,
+      "lastFpsLow1Pct": 231.17,
+      "lastModelUsage": {},
+      "lastSessionId": "9e88a07b-df28-4846-bd11-34d938c5f2d1"
+    },
+    "/home/igor/Desktop/trustguard/v3-repos/frontend-v3": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "assessment-wizard.tsx",
+        "forgot-password.tsx",
+        "login.tsx",
+        "register.tsx",
+        "middleware.ts"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1769633739301,
+      "lastCost": 0.00041699999999999994,
+      "lastAPIDuration": 952,
+      "lastAPIDurationWithoutRetries": 950,
+      "lastToolDuration": 0,
+      "lastDuration": 209389,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 287,
+      "lastTotalOutputTokens": 26,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.51,
+      "lastFpsLow1Pct": 186.93,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 287,
+          "outputTokens": 26,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00041699999999999994
+        }
+      },
+      "lastSessionId": "eceb96d4-72c8-4376-aeb4-73e61fcefa28"
+    }
+  },
+  "lastReleaseNotesSeen": "2.1.49",
+  "hasShownOpus45Notice": {
+    "e76c31cf-75df-402f-a01c-b82c01506569": true
+  },
+  "groveConfigCache": {
+    "c3d5cce4-cdf7-4951-84b6-650564a91165": {
+      "grove_enabled": true,
+      "timestamp": 1771890041720
+    }
+  },
+  "s1mAccessCache": {
+    "e76c31cf-75df-402f-a01c-b82c01506569": {
+      "hasAccess": false,
+      "hasAccessNotAsDefault": false,
+      "timestamp": 1771266313860
+    }
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "skillUsage": {
+    "init": {
+      "usageCount": 1,
+      "lastUsedAt": 1768845025359
+    }
+  },
+  "githubRepoPaths": {
+    "tgorg-ai/backend-v3": [
+      "/home/igor/Desktop/trustguard/v3-repos/backend-v3"
+    ],
+    "tgorg-ai/frontend-v3": [
+      "/home/igor/Desktop/trustguard/v3-repos/frontend-v3"
+    ]
+  },
+  "lastPlanModeUse": 1771902141307,
+  "hasShownOpus46Notice": {
+    "e76c31cf-75df-402f-a01c-b82c01506569": true
+  },
+  "penguinModeOrgEnabled": false,
+  "opus46FeedSeenCount": 57,
+  "clientDataCache": {
+    "data": {},
+    "timestamp": 1771949566639
+  },
+  "showSpinnerTree": false,
+  "effortCalloutDismissed": true,
+  "sonnet1m45MigrationComplete": true,
+  "birthdayHatAnimationCount": 3,
+  "cachedExtraUsageDisabledReason": "org_level_disabled"
+}

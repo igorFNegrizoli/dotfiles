@@ -1,0 +1,68 @@
+// ~/claude-runner/devcontainer.json
+{
+  "name": "claude-runner",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+
+  // Mount your PROJECT folder into the container (read-write, but no .devcontainer inside repo)
+  "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+
+  "mounts": [
+    // Claude Code config (API key, MCP config, etc.)
+    "source=${localEnv:HOME}/.config/claude-code,target=/root/.config/claude-code,type=bind",
+
+    // Ralph todo list (persistent across context resets)
+    "source=${localEnv:HOME}/claude-runner/todo.txt,target=/root/todo.txt,type=bind",
+
+    // Ralph skills
+    "source=${localEnv:HOME}/claude-runner/skills,target=/root/skills,type=bind,readonly",
+
+    // Claude.md instructions
+    "source=${localEnv:HOME}/claude-runner/claude.md,target=/workspace/CLAUDE.md,type=bind",
+
+    // Docker socket so Claude can manage containers
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+
+    // justfile
+    "source=${localEnv:HOME}/claude-runner/justfile,target=/workspace/justfile,type=bind"
+
+    // ❌ DO NOT mount ~/.ssh — this is intentional isolation
+  ],
+
+  // Join your project's Docker Compose network
+  // Replace "myapp_default" with your actual network name (docker network ls)
+  // "runArgs": [
+  //   "--network=myapp_default",
+  //   "--hostname=claude-runner"
+  // ],
+  "runArgs": [
+      "--network=trustguard-network",
+      "--hostname=claude-runner"
+    ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+
+  // MCP servers for Claude Code
+  "customizations": {
+    "claude-code": {
+      "mcpServers": {
+        "dev-browser": {
+          "command": "npx",
+          "args": ["-y", "@sawyerhood/dev-browser-mcp"]
+        },
+        "open-webSearch": {
+          "command": "npx",
+          "args": ["-y", "open-websearch-mcp"]
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code 2>/dev/null || true"
+}
