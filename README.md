@@ -1,6 +1,6 @@
 # Dotfiles
 
-##What it manages
+## What it manages
 
 Run this script at first setup: `init.sh`
 
