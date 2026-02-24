@@ -15,6 +15,11 @@
 !claude/**
 !claude-runner/
 !claude-runner/**
+# Specifically ignore the ralph files that comes from the submodule (copied during the init.sh script)
+claude-runner/skills/prd/
+claude-runner/skills/ralph/
+# Allow the other skills
+!claude-runner/skills/**
 !htop/
 !htop/**
 !nautilus/
