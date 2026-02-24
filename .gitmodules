@@ -1,0 +1,3 @@
+[submodule "claude-runner/skills/ralph"]
+	path = claude-runner/skills/ralph
+	url = https://github.com/snarktank/ralph.git
