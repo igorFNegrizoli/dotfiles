@@ -4,12 +4,12 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "initializeommand": "mkdir -p ~/.config/claude-runner/skills && cp -rn ~/.config/claude/skills/. ~/.config/claude-runner/skills/",
+  "initializeommand": "mkdir -p ~/.config/claude-runner/skills && cp -rn ~/.config/claude/skills/. ~/.config/claude-runner/skills/ && mkdir -p ~/.config/claude-runner/agents && cp -rn ~/.config/claude/agents/. ~/.config/claude-runner/agents/ && cat ~/.config/claude-runner/CLAUDE.md <(echo) deps/ralph/CLAUDE.md > ~/.config/claude-runner/CLAUDE.merged.md",
   "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace/v3-repos,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "mounts": [
     "source=${localEnv:HOME}/.config/claude-runner,target=/root/.claude,type=bind",
-    "source=${localEnv:HOME}/.config/claude-runner/CLAUDE.md,target=/workspace/CLAUDE.md,type=bind",
+    "source=${localEnv:HOME}/.config/claude-runner/CLAUDE.merged.md,target=/workspace/CLAUDE.md,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
   ],
   "runArgs": [

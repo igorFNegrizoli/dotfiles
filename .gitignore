@@ -14,8 +14,6 @@
 !alacritty/**
 !claude/
 !claude/**
-!claude/skills/
-!claude/skills/**
 !claude-runner/
 !claude-runner/.devcontainer/
 !claude-runner/.devcontainer/**
