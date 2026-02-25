@@ -13,9 +13,9 @@ claude-runner (isolated on devcontainer)
 htop
 nautilus
 opencode
-qBittorrent
 qtile
 tmux
+zsh
 
 Note: With the addition of the [Ralph Loop Repo](https://github.com/snarktank/ralph) to already ship `claude-runner` with batteries included
 
@@ -26,8 +26,7 @@ Well, Claude Code adds its MCP configurations on `~/.claude.json` which witholds
 
 
 ## Running claude inside a devcontainer
-```
-devcontainer up --workspace-folder ~/.config/claude-runner/ --remove-existing-container
-docker ps
-docker exec -it <devcontainer_container_id> bash
-```
+Use the ` grounded-claude` script 
+Grab the container ID
+Run `docker exec -it <devcontainer_container_id> bash`
+
