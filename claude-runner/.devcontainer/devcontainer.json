@@ -4,10 +4,10 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "initializeCommand": "mkdir -p ~/.config/claude-runner/skills && cp -rn ~/.config/claude/skills/. ~/.config/claude-runner/skills/",
+  "initializeommand": "mkdir -p ~/.config/claude-runner/skills && cp -rn ~/.config/claude/skills/. ~/.config/claude-runner/skills/",
   "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace/v3-repos,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
-  "mounts": 
+  "mounts": [
     "source=${localEnv:HOME}/.config/claude-runner,target=/root/.claude,type=bind",
     "source=${localEnv:HOME}/.config/claude-runner/CLAUDE.md,target=/workspace/CLAUDE.md,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
