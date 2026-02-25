@@ -13,6 +13,8 @@
 !scripts/**
 !zsh/
 !zsh/**
+zsh/.zcompdump*
+zsh/zcompdump*
 !README.md
 !alacritty/
 !alacritty/**
