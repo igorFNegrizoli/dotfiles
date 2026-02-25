@@ -3,6 +3,7 @@ git submodule update --init --recursive
 cp -r deps/ralph/skills/. claude-runner/skills/
 # create the empty file so I can save progress if a session ends but still dont have it on the dotfile repo
 touch claude-runner/todo.txt
+cp deps/ralph/ralph.sh claude-runner/
 #symlink the config files to the actual path claude uses (clade code does not uses XDG Base Directory Specification)
 mkdir -p ~/.claude/
 ln -sfn ~/.config/claude/CLAUDE.md ~/.claude/CLAUDE.md
