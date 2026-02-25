@@ -20,6 +20,11 @@ tmux
 Note: With the addition of the [Ralph Loop Repo](https://github.com/snarktank/ralph) to already ship `claude-runner` with batteries included
 
 
+## Installing Claude code MCPs
+Well, Claude Code adds its MCP configurations on `~/.claude.json` which witholds sensitive data. Given that, I will need to manually run the MCPs at startup
+`claude mcp add open-websearch -- npx -y @smithery/cli run Aas-ee/open-websearch`
+
+
 ## Running claude inside a devcontainer
 ```
 devcontainer up --workspace-folder ~/.config/claude-runner/ --remove-existing-container
