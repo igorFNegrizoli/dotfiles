@@ -1,8 +1,11 @@
 # Dotfiles
 
-## What it manages
+## First of all
 
-Run this script at first setup: `init.sh`
+Run this script at first setup
+`./init.sh`
+
+##What it manages
 
 alacritty
 claude (running at host)
