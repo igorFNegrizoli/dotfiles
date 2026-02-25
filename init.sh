@@ -5,7 +5,9 @@ cp -r deps/ralph/skills/. claude-runner/skills/
 touch claude-runner/todo.txt
 cp -R claude/skills/ ~/.claude/
 cp claude/CLAUDE.md ~/.claude/
+#symlink the config files to the actual path claude uses (clade code does not uses XDG Base Directory Specification)
 ln -sf ~/.config/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sf ~/.config/claude/skills ~/.claude/
+echo 'Dont forget to setup your MCP servers'
 
 
