@@ -6,10 +6,8 @@
   },
   "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace/v3-repos,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
-  "mounts": [
-    "source=${localEnv:HOME}/.config/claude-runner,target=/root/.config/claude-code,type=bind",
-    "source=${localEnv:HOME}/.config/claude-runner/todo.txt,target=/root/todo.txt,type=bind",
-    "source=${localEnv:HOME}/.config/claude-runner/skills,target=/root/skills,type=bind,readonly",
+  "mounts": 
+    "source=${localEnv:HOME}/.config/claude-runner,target=/root/.claude,type=bind",
     "source=${localEnv:HOME}/.config/claude-runner/CLAUDE.md,target=/workspace/CLAUDE.md,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
   ],
