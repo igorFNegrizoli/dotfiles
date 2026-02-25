@@ -9,6 +9,10 @@
 # Whitelist
 # Need to add both the root folder and the recursive wildcard
 !init.sh
+!scripts/
+!scripts/**
+!zsh/
+!zsh/**
 !README.md
 !alacritty/
 !alacritty/**
@@ -28,8 +32,6 @@ claude-runner/skills/ralph/
 !nautilus/**
 !opencode/
 !opencode/**
-!qBittorrent/
-!qBittorrent/**
 !qtile/
 !qtile/**
 !tmux/
