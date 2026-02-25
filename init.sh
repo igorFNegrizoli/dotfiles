@@ -1,3 +1,11 @@
+echo "Starting custom sripts setup"
+# Write zsh config
+mkdir -p ~/.local/bin
+mkdir -p ~/.config/zsh
+ln -sf "$HOME/.config/zsh/.zshenv" "$HOME/.zshenv"
+chmod +x ~/.config/scripts/*
+echo "Custom scripts setup done"
+echo "Starting Claude Code setup"
 # init submodules (only ralph at the time of this script creation)
 git submodule update --init --recursive
 cp -r deps/ralph/skills/. claude-runner/skills/
@@ -9,6 +17,5 @@ mkdir -p ~/.claude/
 ln -sfn ~/.config/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sfn ~/.config/claude/skills ~/.claude/
 ln -sfn ~/.config/claude/agents ~/.claude/
+echo "Claude Code setup done"
 echo 'Dont forget to setup your MCP servers'
-
-

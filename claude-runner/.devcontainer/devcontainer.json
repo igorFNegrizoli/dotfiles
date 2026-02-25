@@ -5,7 +5,7 @@
     "context": "."
   },
   "initializeCommand": "mkdir -p ~/.config/claude-runner/skills && cp -r ~/.config/claude/skills/. ~/.config/claude-runner/skills/ && mkdir -p ~/.config/claude-runner/agents && cp -r ~/.config/claude/agents/. ~/.config/claude-runner/agents/ && { cat ~/.config/claude-runner/CLAUDE.md; echo; cat ~/.config/deps/ralph/CLAUDE.md; } > ~/.config/claude-runner/CLAUDE.merged.md",
-  "workspaceMount": "source=${localEnv:HOME}/code/trustguard/v3-repos/,target=/workspace/my_code,type=bind,consistency=cached",
+  "workspaceMount": "source=${localEnv:PROJECT_PATH},target=/workspace/my_code,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "mounts": [
     "source=${localEnv:HOME}/.config/claude-runner,target=/root/.claude,type=bind",
@@ -14,7 +14,7 @@
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
   ],
   "runArgs": [
-      "--network=trustguard-v3-network",
+      "--network=${localEnv:DOCKER_NETWORK}",
       "--hostname=claude-runner"
     ],
 

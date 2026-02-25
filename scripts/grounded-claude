@@ -1,0 +1,117 @@
+#!/bin/bash
+# ==============================================================================
+# NAME
+#     claude-runner - Spin up the claude-runner devcontainer for any project
+#
+# SYNOPSIS
+#     claude-runner [OPTIONS] <network_name>
+#
+# DESCRIPTION
+#     Launches the claude-runner devcontainer defined at ~/.config/claude-runner/
+#     with the current working directory mounted as the project workspace, and
+#     connected to the specified Docker network.
+#
+#     Run this script from the root of the project you want to work on. It will
+#     automatically export PROJECT_PATH (current directory) and DOCKER_NETWORK
+#     (the network you pass in) as environment variables, which the devcontainer
+#     config reads via ${localEnv:PROJECT_PATH} and ${localEnv:DOCKER_NETWORK}.
+#
+# OPTIONS
+#     -r, --recreate
+#         Destroy and recreate the container if one already exists.
+#         Passes --remove-existing-container to devcontainer up.
+#         Useful when you switch projects or the container is in a bad state.
+#
+#     -h, --help
+#         Show this help message and exit.
+#
+# ARGUMENTS
+#     network_name
+#         The name of the Docker network to attach the container to.
+#         The network must already exist before running this script.
+#         Example: my-docker-network
+#
+# EXAMPLES
+#     # Start the container connected to a network (from your project root)
+#     cd ~/code/myproject
+#     claude-runner my-docker-network
+#
+#     # Recreate the container from scratch (useful when switching projects)
+#     cd ~/code/myproject
+#     claude-runner --recreate my-docker-network
+#
+# DEPENDENCIES
+#     - devcontainer CLI  (npm install -g @devcontainers/cli)
+#     - Docker
+#
+# CONFIGURATION
+#     Devcontainer config is read from: ~/.config/claude-runner/.devcontainer/
+#     Ensure devcontainer.json uses:
+#       ${localEnv:PROJECT_PATH}   → for the workspace source mount
+#       ${localEnv:DOCKER_NETWORK} → for the --network runArg
+# ==============================================================================
+
+set -euo pipefail
+
+# ── Usage ────────────────────────────────────────────────────────────────────
+usage() {
+  echo "Usage: $(basename "$0") [OPTIONS] <network_name>"
+  echo ""
+  echo "Options:"
+  echo "  -r, --recreate    Pass --remove-existing-container to devcontainer up"
+  echo "  -h, --help        Show this help message"
+  echo ""
+  echo "Examples:"
+  echo "  $(basename "$0") your-compose-network-name"
+  echo "  $(basename "$0") --recreate your-compose-network-name"
+  exit 1
+}
+
+# ── Arg parsing ──────────────────────────────────────────────────────────────
+RECREATE=false
+NETWORK=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -r|--recreate) RECREATE=true; shift ;;
+    -h|--help) usage ;;
+    -*) echo "Unknown option: $1"; usage ;;
+    *) NETWORK="$1"; shift ;;
+  esac
+done
+
+if [[ -z "$NETWORK" ]]; then
+  echo "Error: network_name is required."
+  usage
+fi
+
+# ── Set env vars ─────────────────────────────────────────────────────────────
+export PROJECT_PATH="$(pwd)"
+export DOCKER_NETWORK="$NETWORK"
+
+echo "--------------------------------------------"
+echo "  claude-runner devcontainer startup"
+echo "--------------------------------------------"
+echo "  PROJECT_PATH  : $PROJECT_PATH"
+echo "  DOCKER_NETWORK: $DOCKER_NETWORK"
+echo "  RECREATE      : $RECREATE"
+echo "--------------------------------------------"
+echo ""
+
+# ── Build devcontainer up command ────────────────────────────────────────────
+CMD="devcontainer up --workspace-folder ~/.config/claude-runner/"
+
+if [[ "$RECREATE" == true ]]; then
+  CMD="$CMD --remove-existing-container"
+fi
+
+echo "Running: $CMD"
+echo ""
+
+# ── Run ───────────────────────────────────────────────────────────────────────
+eval "$CMD"
+
+echo ""
+echo "--------------------------------------------"
+echo "  devcontainer up completed successfully    "
+echo "--------------------------------------------"
