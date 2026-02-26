@@ -15,6 +15,7 @@
 !zsh/**
 zsh/.zcompdump*
 zsh/zcompdump*
+zsh/.zsh_history
 !README.md
 !alacritty/
 !alacritty/**

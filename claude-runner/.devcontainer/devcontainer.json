@@ -6,9 +6,11 @@
   },
   "initializeCommand": "mkdir -p ~/.config/claude-runner/skills && cp -r ~/.config/claude/skills/. ~/.config/claude-runner/skills/ && mkdir -p ~/.config/claude-runner/agents && cp -r ~/.config/claude/agents/. ~/.config/claude-runner/agents/ && { cat ~/.config/claude-runner/CLAUDE.md; echo; cat ~/.config/deps/ralph/CLAUDE.md; } > ~/.config/claude-runner/CLAUDE.merged.md",
   "workspaceMount": "source=${localEnv:PROJECT_PATH},target=/workspace/my_code,type=bind,consistency=cached",
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
   "workspaceFolder": "/workspace",
   "mounts": [
-    "source=${localEnv:HOME}/.config/claude-runner,target=/root/.claude,type=bind",
+    "source=${localEnv:HOME}/.config/claude-runner,target=/home/vscode/.claude,type=bind",
     "source=${localEnv:HOME}/.config/claude-runner/CLAUDE.merged.md,target=/workspace/CLAUDE.md,type=bind",
     "source=${localEnv:HOME}/.config/claude-runner/ralph.sh,target=/workspace/ralph.sh,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
@@ -37,5 +39,5 @@
     }
   },
 
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code 2>/dev/null || true",
+  "postCreateCommand": "sudo chown -R vscode:vscode /workspace /home/vscode/.claude",
 }

@@ -30,5 +30,10 @@ RUN git config --system alias.push "!echo 'You are executing in a devcontainer, 
 RUN git config --system user.name "Igor F. Negrizoli"
 RUN git config --system user.email "igor.negrizoli@gmail.com"
 
+RUN usermod -aG docker vscode
+RUN chown -R vscode:vscode /home/vscode
+
+USER vscode
 
 WORKDIR /workspace
+
