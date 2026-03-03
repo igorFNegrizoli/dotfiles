@@ -5,11 +5,12 @@ flatpak install flathub org.mozilla.firefox org.qbittorrent.qBittorrent com.spot
 xdg-mime default org.videolan.VLC.desktop video/mp4
 echo "Removing firefox installed by layering"
 rpm-ostree override remove firefox firefox-langpacks
-echo "Creating toolbox and installing htop, fastfetch and tmux"
+echo "Creating toolbox and installing htop, fastfetch"
 toolbox create -y
-toolbox run sudo dnf install -y htop fastfetch tmux
+toolbox run sudo dnf install -y htop fastfetch
+# no tmux and alacritty for now
 echo "installing layered packages via rpm-ostree"
-rpm-ostree install -y alacritty zsh moby-engine docker-compose
+rpm-ostree install -y zsh moby-engine docker-compose
 echo "Write zsh config"
 mkdir -p ~/.local/bin
 mkdir -p ~/.config/zsh
