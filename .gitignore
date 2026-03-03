@@ -32,12 +32,10 @@ claude-runner/skills/prd/
 claude-runner/skills/ralph/
 !htop/
 !htop/**
-!nautilus/
-!nautilus/**
 !opencode/
 !opencode/**
-!qtile/
-!qtile/**
+!toolbox/
+!toolbox/**
 !tmux/
 !tmux/**
 !deps/

@@ -1,12 +1,17 @@
-[shell]
+[window]
+# Isso muda o ID da janela para que o COSMIC não as agrupe
+class = { instance = "Alacritty-new", general = "Alacritty-new" }
+
+[terminal.shell]
 # Opens tmux with new session
 # Session pool shared and mirrored between alacritty terminals
-program = "/bin/sh"
-args = ["-c", "tmux new-session -t main || tmux new-session -s main"]
-
+program = "/usr/bin/toolbox"
+args = ["run", "sh", "-c", "tmux new-session -t main || tmux new-session -s main"]
 
 [[keyboard.bindings]]
 key = "Return"
 mods = "Shift"
 chars = "\u001b\r"
+
+[terminal]
 
