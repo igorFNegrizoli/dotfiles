@@ -9,6 +9,7 @@
 # Whitelist
 # Need to add both the root folder and the recursive wildcard
 !init.sh
+!fedora_atomic_setup.sh
 !scripts/
 !scripts/**
 !zsh/

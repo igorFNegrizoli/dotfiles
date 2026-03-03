@@ -19,3 +19,7 @@ ln -sfn ~/.config/claude/skills ~/.claude/
 ln -sfn ~/.config/claude/agents ~/.claude/
 echo "Claude Code setup done"
 echo 'Dont forget to setup your MCP servers'
+echo "Setting up git configs"
+git config --global user.email "igor.negrizoli@gmail.com"
+git config --global user.name "Igor F. Negrizoli"
+echo "init.sh completed"
