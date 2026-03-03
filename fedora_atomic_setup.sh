@@ -36,4 +36,5 @@ echo 'Dont forget to setup your MCP servers'
 echo "Setting up git configs"
 git config --global user.email "igor.negrizoli@gmail.com"
 git config --global user.name "Igor F. Negrizoli"
+git config --global url."git@github.com:".insteadOf "https://github.com/"
 echo "fedora_atomic_setup.sh completed"
