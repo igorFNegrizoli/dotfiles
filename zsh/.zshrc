@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="crcandy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -115,12 +115,12 @@ venv_prefix() {
   print -n "%F{215}(${name})%f "
 }
 
-ORIGINAL_PROMPT=$PROMPT
-SINGLELINE_ORIGINAL_PROMPT=${ORIGINAL_PROMPT//$'\n'/' '}
+# ORIGINAL_PROMPT=$PROMPT
+# SINGLELINE_ORIGINAL_PROMPT=${ORIGINAL_PROMPT//$'\n'/' '}
 
-setopt prompt_subst
+# setopt prompt_subst
 
-PROMPT='$(venv_prefix)'$SINGLELINE_ORIGINAL_PROMPT
+# PROMPT='$(venv_prefix)'$SINGLELINE_ORIGINAL_PROMPT
 
 # opencode
 export PATH=/home/igor/.opencode/bin:$PATH
@@ -129,6 +129,4 @@ export PATH="$PATH:$HOME/.config/scripts"
 HISTFILE="$ZDOTDIR/.zsh_history"
 autoload -Uz compinit
 compinit
-autoload -U colors && colors
-# PROMPT='%F{cyan}%n%f@%F{purple}%m%f %F{yellow}%1~%f %# '
 alias gs='git status'
