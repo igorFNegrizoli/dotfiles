@@ -1,7 +1,7 @@
 echo "Running the setup for Fedora Atomic 43 (Cosmic)"
 echo "Adding Flatpaks"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.mozilla.firefox org.qbittorrent.qBittorrent com.spotify.Client org.dbgate.DbGate org.videolan.VLC md.obsidian.Obsidian -y
+flatpak install flathub com.brave.Browser org.qbittorrent.qBittorrent com.spotify.Client org.dbgate.DbGate org.videolan.VLC md.obsidian.Obsidian -y
 xdg-mime default org.videolan.VLC.desktop video/mp4
 echo "Removing firefox installed by layering"
 rpm-ostree override remove firefox firefox-langpacks
