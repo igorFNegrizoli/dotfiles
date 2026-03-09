@@ -122,9 +122,13 @@ setopt prompt_subst
 
 PROMPT='$(venv_prefix)'$SINGLELINE_ORIGINAL_PROMPT
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # opencode
 export PATH=/home/igor/.opencode/bin:$PATH
 # custom scripts
 export PATH="$PATH:$HOME/.config/scripts"
+HISTFILE="$ZDOTDIR/.zsh_history"
+autoload -Uz compinit
+compinit
+autoload -U colors && colors
+# PROMPT='%F{cyan}%n%f@%F{purple}%m%f %F{yellow}%1~%f %# '
+alias gs='git status'

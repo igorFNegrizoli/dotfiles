@@ -1,4 +1,5 @@
 echo "Running the setup for Fedora Atomic 43 (Cosmic)"
+sudo -v
 echo "Adding Flatpaks"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.brave.Browser org.qbittorrent.qBittorrent com.spotify.Client org.dbgate.DbGate org.videolan.VLC md.obsidian.Obsidian -y
@@ -15,12 +16,15 @@ toolbox run sudo dnf install -y htop fastfetch
 # no tmux and alacritty for now
 echo "installing layered packages via rpm-ostree"
 rpm-ostree install -y zsh moby-engine docker-compose
+echo "Installing Oh My Zsh..."
+ZSH="$HOME/.oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 echo "Write zsh config"
+sudo usermod -s $(which zsh) $USER
 mkdir -p ~/.local/bin
 mkdir -p ~/.config/zsh
 ln -sf "$HOME/.config/zsh/.zshenv" "$HOME/.zshenv"
+echo "Allowing custom scripts"
 chmod +x ~/.config/scripts/*
-echo "Custom scripts setup done"
 
 echo "Starting Claude Code setup - No claude-runner container being set (will have its own repo)"
 # init submodules (only ralph at the time of this script creation)
