@@ -1,0 +1,11 @@
+{
+    "IncognitoModeAvailability": 1,
+    "BraveShieldsDisabledForUrls": [],
+    "BraveRewardsDisabled": true,
+    "BraveWalletDisabled": true,
+    "BraveVPNDisabled": true,
+    "BraveAIChatEnabled": false,
+    "BraveNewsDisabled": true,
+    "BraveTalkDisabled": true,
+    "BraveSpeedreaderEnabled": true
+}

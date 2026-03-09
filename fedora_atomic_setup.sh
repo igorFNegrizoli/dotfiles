@@ -5,6 +5,10 @@ flatpak install flathub com.brave.Browser org.qbittorrent.qBittorrent com.spotif
 xdg-mime default org.videolan.VLC.desktop video/mp4
 echo "Removing firefox installed by layering"
 rpm-ostree override remove firefox firefox-langpacks
+echo "Applying brave policies"
+sudo mkdir -p /etc/brave/policies/managed/
+sudo ln -sfn ~/.config/brave/policy.json /etc/brave/policies/managed/
+sudo flatpak override com.brave.Browser --filesystem="/etc/brave/policies/managed:ro" --filesystem="~/.config/brave:ro"
 echo "Creating toolbox and installing htop, fastfetch"
 toolbox create -y
 toolbox run sudo dnf install -y htop fastfetch
