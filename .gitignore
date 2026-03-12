@@ -24,14 +24,6 @@ zsh/.zsh_history
 !alacritty/**
 !claude/
 !claude/**
-!claude-runner/
-!claude-runner/.devcontainer/
-!claude-runner/.devcontainer/**
-!claude-runner/skills/
-!claude-runner/skills/**
-# Specifically ignore the ralph files that comes from the submodule (copied during the init.sh script)
-claude-runner/skills/prd/
-claude-runner/skills/ralph/
 !htop/
 !htop/**
 !opencode/
@@ -40,8 +32,6 @@ claude-runner/skills/ralph/
 !toolbox/**
 !tmux/
 !tmux/**
-!deps/
-!deps/**
 
 # Assuring these kinds of files/folders do not get commited event if they are inside the whitelisted folders
 **/.DS_Store

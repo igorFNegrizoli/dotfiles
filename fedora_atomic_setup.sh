@@ -13,7 +13,7 @@ sudo ln -sfn ~/.config/brave/policy.json /etc/brave/policies/managed/
 sudo flatpak override com.brave.Browser --filesystem="/etc/brave/policies/managed:ro" --filesystem="~/.config/brave:ro"
 
 echo "Installing layered packages via rpm-ostree"
-rpm-ostree install -y zsh moby-engine docker-compose
+rpm-ostree install -y zsh moby-engine docker-compose distrobox
 
 echo "Installing Oh My Zsh..."
 ZSH="$HOME/.oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
@@ -28,18 +28,14 @@ chmod +x ~/.config/scripts/*
 
 echo "Creating toolbox and installing htop, fastfetch"
 toolbox create -y
-toolbox run sudo dnf install -y htop fastfetch zsh
+toolbox run sudo dnf install -y htop fastfetch zsh v4l-utils
 toolbox run sudo chsh -s /usr/bin/zsh $USER
-# no tmux and alacritty for now
 
-echo "Starting Claude Code setup - No claude-runner container being set (will have its own repo)"
-# init submodules (only ralph at the time of this script creation)
-# git submodule update --init --recursive
-# cp -r deps/ralph/skills/. claude-runner/skills/
-# create the empty file so I can save progress if a session ends but still dont have it on the dotfile repo
-# touch claude-runner/todo.txt
-# cp deps/ralph/ralph.sh claude-runner/
-#symlink the config files to the actual path claude uses (clade code does not uses XDG Base Directory Specif>
+# Docker out of Podman workaround for igorfnegrizoli/grounded-ralph
+systemctl --user enable --now podman.socket
+
+echo "Starting Claude Code setup"
+# Claude config setup
 mkdir -p ~/.claude/
 ln -sfn ~/.config/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sfn ~/.config/claude/skills ~/.claude/
